@@ -55,7 +55,7 @@ main img {
 
 header {
   background-color: #83092e;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 0 20px;
   text-align: center;
 }
 
@@ -63,17 +63,17 @@ header {
   font-family: "Tangerine", cursive;
   font-size: 72px;
   color: #ecdbc9;
-  margin-top: 5px;
 }
 
 header nav ul {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  padding-bottom: 10px;
 }
 
 header nav ul li {
   list-style-type: none;
-  justify-content: space-evenly;
 }
 
 header nav ul li a {
@@ -91,12 +91,14 @@ header nav ul li a:hover {
 form {
   border: 2px solid #6b1a22;
   padding: 10px;
-  justify-content: stretch;
 }
+
 form div {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
+
 form label {
   font-weight: bold;
 }
@@ -129,40 +131,40 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width: 480px) {
-  .group {
-    flex-direction: row;
-    justify-content: center;
-  }
-  .item {
-    flex-direction: row;
-    justify-content: space-around;
-    align-self: center;
-  }
-  .item-double {
-    justify-content: right;
-    vertical-align: middle;
-  }
+@media all and (min-width:480px) {
   header {
-    display: flex;
-    padding: 0 30px;
+    padding: 0;
     justify-content: space-between;
   }
 
-  header h1 {
-    font-size: 42px;
-    margin: 14px 0;
-    padding-top: 6px;
-  }
-
-  header nav {
-    margin-top: 15px;
+  header nav ul {
     justify-content: right;
   }
-  header nav ul li a:hover {
-    color: #bdbdbd;
+
+  
+  .logo {
+    font-size: 48px;
+    margin: 10px;
   }
-  main img {
-    width: 100%;
+
+  .group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  h1, h3 {
+    text-align: center;
+  }
+
+  p, li {
+    font-size: 12px
   }
 }
